@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#4c6fff" />
+<title>轻转 · 在线文档转换，文件不出浏览器</title>
+<meta name="description" content="轻转是一个纯浏览器端运行的文档转换工具：图片压缩、图片转 PDF、PDF 转图片、PDF 合并拆分、Markdown 转 PDF 等，文件不上传，本地完成。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%234c6fff'/%3E%3Ctext x='50' y='68' font-size='52' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3E%E8%BD%BB%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ================= 顶栏 ================= -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="#/home">
+      <span class="mark">轻</span>
+      <span class="txt">轻转<small>QINGZHUAN</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#/home" data-nav="home">首页</a>
+      <a href="#/history" data-nav="history">转换记录</a>
+      <a href="#/settings" data-nav="settings">设置</a>
+    </nav>
+
+    <div class="header-right">
+      <span class="pill-safe"><i></i>文件不上传</span>
+      <a class="btn btn-primary" id="headerCta" href="#/home" style="height:38px;font-size:13.5px;padding:0 18px;">开始转换</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 主内容 ================= -->
+<main id="app"></main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand"><span class="mark">轻</span>轻转 · 让格式不再是问题</div>
+    <div class="footer-note">所有转换在浏览器本地完成，文件不会离开你的设备</div>
+  </div>
+</footer>
+
+<!-- 提示条 -->
+<div class="toast" id="toast"></div>
+
+<!-- ================= 依赖（CDN） ================= -->
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
+<!-- ================= 应用 ================= -->
+<script src="assets/js/tools.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
